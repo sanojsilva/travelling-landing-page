@@ -12,7 +12,6 @@ const styles = {
   root: {
     flexGrow: 1,
     margin: '0',
-    paddingTop: '10px !important'
   },
 };
 

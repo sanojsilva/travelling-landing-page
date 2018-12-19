@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import Hero from './components/Hero';
+import SocialProof from './components/SocialProof';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
@@ -12,6 +14,8 @@ class App extends Component {
     return (
       <AppWrapper>
           <Header />
+          <Hero />
+          <SocialProof />
       </AppWrapper>
     );
   }
