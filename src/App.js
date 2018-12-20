@@ -15,6 +15,7 @@ class App extends Component {
       <AppWrapper>
           <Header />
           <Hero />
+          <br />
           <SocialProof />
       </AppWrapper>
     );
