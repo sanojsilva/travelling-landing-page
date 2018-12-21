@@ -22,11 +22,12 @@ class Header extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll);
     }
     
     handleScroll(e) {
-        if (e.pageY > 0) {
+        //console.log(window.pageYOffset);
+        if (window.pageYOffset > 0) {
             this.setState({
                 transparent: false,
                 textColor: 'black'

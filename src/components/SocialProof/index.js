@@ -32,7 +32,7 @@ const SocialProof = (props) => {
  
     return (
         <div className={classes.root}>
-          <Grid container spacing={10}>
+          <Grid container spacing={24}>
             <Grid item xs>
                 <QuoteBox title="Jungle" image={social_proof1} />
             </Grid>
