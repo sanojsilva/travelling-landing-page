@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-import styled from 'styled-components';
-import background_image from '../../resources/images/background_image.jpeg';
+//import styled from 'styled-components';
+//import background_image from '../../resources/images/background_image.jpeg';
 
 
-const HeaderWrapper = styled.div`
-    margin: 0;
-    padding: 0;
-`;
+//const HeaderWrapper = styled.div`
+    //margin: 0;
+    //padding: 0;
+//`;
 
 class Header extends Component {
 

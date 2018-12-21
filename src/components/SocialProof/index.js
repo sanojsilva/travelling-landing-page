@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+//import styled from 'styled-components';
 import QuoteBox from './QuoteBox';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+//import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import social_proof1 from '../../resources/images/social_proof1.jpeg';
 import social_proof2 from '../../resources/images/social_proof2.jpeg';

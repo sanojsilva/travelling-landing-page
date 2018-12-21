@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MidSection from './MidSection';
 import styled from 'styled-components';
 import background_image from '../../resources/images/background_image.jpeg';
@@ -16,20 +16,13 @@ const HeroWrapper = styled.div`
     box-shadow: border-box;
 `;
 
-class Hero extends Component {
+const Hero = (props) => {
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-
-        return (
-            <HeroWrapper>
-                <MidSection />
-            </HeroWrapper>
-        );
-    }
+    return (
+        <HeroWrapper>
+            <MidSection text="Beautiful Landscapes" />
+        </HeroWrapper>
+    );
 }
 
 

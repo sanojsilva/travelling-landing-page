@@ -19,7 +19,7 @@ const MidSection = (props) => {
 
     return(
         <MidSectionWrapper>
-            Feel the Beautiful Nature
+            {props.text}
         </MidSectionWrapper>
     );
 }
