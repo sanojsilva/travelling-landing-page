@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import SocialProof from './components/SocialProof';
+import Sites from './components/Sites';
 import Footer from './components/Footer';
 import styled from 'styled-components';
 
@@ -17,7 +17,7 @@ class App extends Component {
           <Header />
           <Hero />
           <br />
-          <SocialProof />
+          <Sites />
           <Footer />
       </AppWrapper>
     );

@@ -15,7 +15,8 @@ class Header extends Component {
         super(props);
         this.state = {
             transparent: true,
-            textColor: 'white'
+            textColor: 'white',
+            borderBottom: false
         };
 
         this.handleScroll = this.handleScroll.bind(this);
@@ -30,12 +31,14 @@ class Header extends Component {
         if (window.pageYOffset > 0) {
             this.setState({
                 transparent: false,
-                textColor: 'black'
+                textColor: 'black',
+                borderBottom: true
             });
         } else {
             this.setState({
                 transparent: true,
-                textColor: 'white'
+                textColor: 'white',
+                borderBottom: false
             });
         }
     }
@@ -44,7 +47,7 @@ class Header extends Component {
 
         return (
             <div>
-                <NavBar transparent={this.state.transparent} textColor={this.state.textColor} />
+                <NavBar transparent={this.state.transparent} textColor={this.state.textColor} borderBottom={this.state.borderBottom} />
             </div>
         );
     }

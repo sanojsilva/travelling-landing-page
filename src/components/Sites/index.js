@@ -9,6 +9,7 @@ import social_proof1 from '../../resources/images/social_proof1.jpeg';
 import social_proof2 from '../../resources/images/social_proof2.jpeg';
 import social_proof3 from '../../resources/images/social_proof3.jpeg';
 import social_proof4 from '../../resources/images/social_proof4.jpeg';
+import HeadShake from 'react-reveal/HeadShake';
 //const SocialProofWrapper = styled.div`
     //display: flex;
     //flex-wrap: wrap;
@@ -26,34 +27,36 @@ const styles = theme => ({
   },
 });
 
-const SocialProof = (props) => {
+const Sites = (props) => {
 
     const { classes } = props;
  
     return (
         <div className={classes.root}>
-          <Grid container spacing={24}>
-            <Grid item xs>
-                <QuoteBox title="Jungle" image={social_proof1} />
-            </Grid>
-            <Grid item xs>
-                <QuoteBox title="Island" image={social_proof2} />
-            </Grid>
-            <Grid item xs>
-                <QuoteBox title="Ocean" image={social_proof3} />
-            </Grid>
-            <Grid item xs>
-                <QuoteBox title="Mountain" image={social_proof4} />
-            </Grid>
-          </Grid>
+            <HeadShake>
+              <Grid container spacing={24}>
+                    <Grid item xs>
+                        <QuoteBox title="Forests" image={social_proof1} />
+                    </Grid>
+                    <Grid item xs>
+                        <QuoteBox title="Islands" image={social_proof2} />
+                    </Grid>
+                    <Grid item xs>
+                        <QuoteBox title="Seas" image={social_proof3} />
+                    </Grid>
+                    <Grid item xs>
+                        <QuoteBox title="Mountains" image={social_proof4} />
+                    </Grid>
+              </Grid>
+            </HeadShake>
         </div>
     );
 }
 
 
-SocialProof.propTypes = {
+Sites.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SocialProof);
+export default withStyles(styles)(Sites);
 

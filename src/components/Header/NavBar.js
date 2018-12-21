@@ -47,7 +47,8 @@ const NavBar = (props) => {
             <AppBar position="fixed" style={
                 {
                     backgroundColor: props.transparent === true ? 'transparent' : 'white',
-                    boxShadow: 'none'
+                    boxShadow: 'none',
+                    borderBottom: props.borderBottom === true ? '3px solid tomato' : ''
                 }
             }>
             <Toolbar>
@@ -55,7 +56,7 @@ const NavBar = (props) => {
                 <Ul>
                     <Li><A href="#" textColor={props.textColor}>Home</A></Li>
                     <Li><A href="#" textColor={props.textColor}>Highlights</A></Li>
-                    <Li><A href="#" textColor={props.textColor}>Agenda</A></Li>
+                    <Li><A href="#" textColor={props.textColor}>Sites</A></Li>
                     <Li><A href="#" textColor={props.textColor}>About</A></Li>
                     <Li><A href="#" textColor={props.textColor}>Contact Us</A></Li>
                 </Ul>
