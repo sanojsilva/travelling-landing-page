@@ -10,7 +10,7 @@ const Buttons = (props) => {
 
     return(
         <ButtonsWrapper>
-            <Button size="medium" variant="outlined" style={{flex: '1', margin: '10px', 'backgroundColor': 'tomato', color: 'white', border: '1px solid black'}}>
+            <Button size="medium" variant="outlined" style={{flex: '1', margin: '10px', 'backgroundColor': 'tomato', color: 'white', border: '1px solid white'}}>
                 Learn More
             </Button>
             <Button size="medium" variant="outlined" style={{flex: '1', margin: '10px', color: 'white', border: '1px solid white'}}>

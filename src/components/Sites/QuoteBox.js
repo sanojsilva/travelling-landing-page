@@ -48,7 +48,7 @@ const QuoteBox = (props) => {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                  {props.title}
+                  <strong>{props.title}</strong>
               </Typography>
               <Typography component="p">
                       Dolor quam sapiente nesciunt reiciendis error! Maxime consequatur vel quam neque adipisci Accusantium .

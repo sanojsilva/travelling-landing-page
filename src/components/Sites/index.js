@@ -1,5 +1,5 @@
 import React from 'react';
-//import styled from 'styled-components';
+import styled from 'styled-components';
 import QuoteBox from './QuoteBox';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -27,6 +27,12 @@ const styles = theme => ({
   },
 });
 
+const SitesTitle = styled.h2`
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+`;
+
 const Sites = (props) => {
 
     const { classes } = props;
@@ -34,6 +40,7 @@ const Sites = (props) => {
     return (
         <div className={classes.root}>
             <HeadShake>
+            <SitesTitle>Sites</SitesTitle>
               <Grid container>
                     <Grid item xs>
                         <QuoteBox title="Forests" image={sites1} />

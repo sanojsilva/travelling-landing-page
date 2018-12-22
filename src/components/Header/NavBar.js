@@ -33,8 +33,9 @@ const A = styled.a`
     color: ${props => props.textColor};
     text-decoration: none;
     &:hover {
-        border-bottom: 1px solid black;
-        transition: 1000ms;
+        border-bottom: 1px solid tomato;
+        transition: 500ms;
+        color: tomato;
     }
 `;
 
