@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BottomText from './BottomText';
 
 const FooterWrapper = styled.div`
-    background-color: black;
+    background-color: white;
     padding: 70px;
     position: relative;
 `;

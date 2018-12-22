@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 const BottomTextWrapper = styled.div`
-    color: white;
+    color: black;
     text-align: center;
     font-size: 15px;
     padding-bottom: 0px;

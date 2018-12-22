@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const LogoWrapper = styled.div`
     font-size: 2rem;
-    color: white;
+    color: ${props => props.textColor};
     padding-top: 2px;
 `;
 
@@ -16,7 +16,7 @@ const FirstLetter = styled.span`
 
 const Logo = (props) => {
     return (
-        <LogoWrapper>
+        <LogoWrapper textColor={props.textColor}>
             <FirstLetter>T</FirstLetter>ravel
         </LogoWrapper>
     );

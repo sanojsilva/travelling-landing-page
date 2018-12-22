@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Sites from './components/Sites';
 import Footer from './components/Footer';
+import About from './components/About';
+import Highlights from './components/Highlights';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
@@ -16,8 +18,9 @@ class App extends Component {
       <AppWrapper>
           <Header />
           <Hero />
-          <br />
           <Sites />
+          <About />
+          <Highlights />
           <Footer />
       </AppWrapper>
     );

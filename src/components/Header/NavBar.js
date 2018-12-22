@@ -52,7 +52,7 @@ const NavBar = (props) => {
                 }
             }>
             <Toolbar>
-                <Logo />
+                <Logo textColor={props.textColor} />
                 <Ul>
                     <Li><A href="#" textColor={props.textColor}>Home</A></Li>
                     <Li><A href="#" textColor={props.textColor}>Highlights</A></Li>

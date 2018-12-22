@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 //import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import social_proof1 from '../../resources/images/social_proof1.jpeg';
-import social_proof2 from '../../resources/images/social_proof2.jpeg';
-import social_proof3 from '../../resources/images/social_proof3.jpeg';
-import social_proof4 from '../../resources/images/social_proof4.jpeg';
+import sites1 from '../../resources/images/sites1.jpeg';
+import sites2 from '../../resources/images/sites2.jpeg';
+import sites3 from '../../resources/images/sites3.jpeg';
+import sites4 from '../../resources/images/sites4.jpeg';
 import HeadShake from 'react-reveal/HeadShake';
 //const SocialProofWrapper = styled.div`
     //display: flex;
@@ -34,18 +34,18 @@ const Sites = (props) => {
     return (
         <div className={classes.root}>
             <HeadShake>
-              <Grid container spacing={24}>
+              <Grid container>
                     <Grid item xs>
-                        <QuoteBox title="Forests" image={social_proof1} />
+                        <QuoteBox title="Forests" image={sites1} />
                     </Grid>
                     <Grid item xs>
-                        <QuoteBox title="Islands" image={social_proof2} />
+                        <QuoteBox title="Islands" image={sites2} />
                     </Grid>
                     <Grid item xs>
-                        <QuoteBox title="Seas" image={social_proof3} />
+                        <QuoteBox title="Seas" image={sites3} />
                     </Grid>
                     <Grid item xs>
-                        <QuoteBox title="Mountains" image={social_proof4} />
+                        <QuoteBox title="Mountains" image={sites4} />
                     </Grid>
               </Grid>
             </HeadShake>
