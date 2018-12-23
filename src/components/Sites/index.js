@@ -31,6 +31,7 @@ const SitesTitle = styled.h2`
     font-family: Roboto;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 0;
 `;
 
 const Sites = (props) => {

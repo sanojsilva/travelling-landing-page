@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Highlights from './components/Highlights';
 import styled from 'styled-components';
+import { Element } from 'react-scroll';
 
 const AppWrapper = styled.div`
     padding: 0;
@@ -17,11 +18,21 @@ class App extends Component {
     return (
       <AppWrapper>
           <Header />
-          <Hero />
-          <Sites />
-          <About />
-          <Highlights />
-          <Footer />
+          <Element name="hero">
+              <Hero />
+          </Element>
+          <Element name="sites">
+              <Sites />
+          </Element>
+          <Element name="about">
+              <About />
+          </Element>
+          <Element name="highlights">
+              <Highlights />
+          </Element>
+          <Element name="footer">
+              <Footer />
+          </Element>
       </AppWrapper>
     );
   }

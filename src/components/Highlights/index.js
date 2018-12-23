@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Slider from "react-slick";
 import one from '../../resources/images/highlights/one.jpeg';
@@ -12,7 +12,7 @@ import eight from '../../resources/images/highlights/eight.jpeg';
 
 const HighlightsWrapper = styled.div`
     background-color: white;
-    padding: 70px;
+    padding: 40px 10px;
     position: relative;
 `;
 
@@ -21,7 +21,7 @@ const ImageWrapper = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 60vh;
     margin: 0px 10px;
 `;
 
@@ -37,47 +37,80 @@ const HighlightsTitle = styled.h3`
 
 `;
 
-const Highlights = (props) => {
+class Highlights extends Component {
 
-    const images = [
-        one,
-        two,
-        three,
-        four,
-        five,
-        six,
-        seven,
-        eight
-    ];
+    constructor(props){
+        super(props);
+        this.state = {
+            centerMode: true,
+            slidesToShow: 2
+        }
 
-    const settings = {
-      className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 2,
-      speed: 500,
-      autoplay: true
-    };
+        this.handleResize = this.handleResize.bind(this);
+    }
 
-    return (
-        <HighlightsWrapper>
-            <HighlightsTitle>
-                Highlights
-            </HighlightsTitle>
-            <Slider {...settings}>
-                {images.map((image, index) => (
-                    <div>
-                        <ImageWrapper image={image} key={index} ></ImageWrapper>
-                        <ImageText>
-                            Elit commodi facilis commodi iusto ipsa debitis? Officiis magnam voluptatibus nam quod sit Id vero ducimus veniam recusandae beatae Aliquam at dolor officiis obcaecati asperiores Nostrum obcaecati ut rerum voluptatum
-                        </ImageText>
-                    </div>
-                ))}
-            </Slider>
-                
-        </HighlightsWrapper>
-    );
+    componentDidMount() {
+        this.handleResize();
+        window.addEventListener('resize', this.handleResize);
+    }
+
+    handleResize(e) {
+        if (window.innerWidth < 750) {
+            this.setState({
+                centerMode: false,
+                slidesToShow: 1
+            });
+        } else {
+            this.setState({
+                centerMode: true,
+                slidesToShow: 2
+            });
+        }
+    }
+
+    render(){
+
+        const images = [
+            one,
+            two,
+            three,
+            four,
+            five,
+            six,
+            seven,
+            eight
+        ];
+
+        const settings = {
+            className: "center",
+            centerMode: this.state.centerMode,
+            infinite: true,
+            centerPadding: "60px",
+            slidesToShow: this.state.slidesToShow,
+            speed: 500,
+            autoplay: true,
+            arrows: false
+        };
+
+        return (
+            <HighlightsWrapper>
+                <HighlightsTitle>
+                    Highlights
+                </HighlightsTitle>
+                <Slider {...settings}>
+                    {images.map((image, index) => (
+                        <div key={index}>
+                            <ImageWrapper image={image}></ImageWrapper>
+                            <ImageText>
+                                Elit commodi facilis commodi iusto ipsa debitis? Officiis magnam voluptatibus nam quod sit Id vero ducimus veniam recusandae beatae Aliquam at dolor officiis obcaecati asperiores Nostrum obcaecati ut rerum voluptatum
+                            </ImageText>
+                        </div>
+                    ))}
+                </Slider>
+                    
+            </HighlightsWrapper>
+        );
+    }
 }
 
 export default Highlights;

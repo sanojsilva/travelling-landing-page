@@ -36,7 +36,8 @@ const Hero = (props) => {
         infinite: true,
         fade: true,
         autoplay: true,
-        speed: 5000
+        speed: 5000,
+        arrows: false
     };
 
     const images = [

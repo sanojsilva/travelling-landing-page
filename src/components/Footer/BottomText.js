@@ -18,6 +18,8 @@ const BottomText = (props) => {
     return (
         <BottomTextWrapper>
             Copy Rights Reserved 2018 
+            <br />
+            Created And Designed By Sanoj Silva
         </BottomTextWrapper>
     );
 }

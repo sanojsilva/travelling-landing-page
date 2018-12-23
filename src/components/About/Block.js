@@ -7,7 +7,7 @@ const BlockWrapper = styled.div`
     font-weight: bold;
     font-family: Roboto;
     border: 2px solid white;
-    padding: 100px;
+    padding: ${props => props.padding};
     border-radius: 100px;
     border-top: none;
     border-bottom: none;
@@ -26,7 +26,7 @@ const SmallTextWrapper = styled.div`
 
 const Block = (props) => {
     return (
-        <BlockWrapper> 
+        <BlockWrapper padding={props.padding}> 
             {props.title}
                 <SmallTextWrapper>
                     Dolor dignissimos minus dicta laboriosam accusantium Eum nulla vitae sapiente rerum suscipit? Atque am eserunt

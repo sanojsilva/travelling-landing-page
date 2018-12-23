@@ -5,8 +5,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 //import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
-
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 import Logo from './Logo';
+import SideDrawer from './SideDrawer';
+import { scroller } from 'react-scroll';
 
 const styles = {
   root: {
@@ -17,7 +20,7 @@ const styles = {
 
 const Ul = styled.ul`
     list-style: none;
-    display: flex;
+    display: ${props => props.display === true ? 'flex' : 'none'};
 `;
 
 const Li = styled.li`
@@ -43,6 +46,20 @@ const NavBar = (props) => {
     
     const { classes } = props;
 
+    const scrollToElement = (element, event) => {
+
+        event.preventDefault();
+        scroller.scrollTo(element, {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+            offset: -100
+
+        });
+
+        props.toggleDrawer(false);
+    }
+
       return (
         <div className={classes.root}>
             <AppBar position="fixed" style={
@@ -53,13 +70,39 @@ const NavBar = (props) => {
                 }
             }>
             <Toolbar>
+                <IconButton
+                    aria-label="Menu"
+                    color="inherit"
+                    onClick={()=> props.toggleDrawer(true)}
+                    style={{
+                        display: props.showDrawer === true ? 'block' : 'none',
+                        color: props.textColor
+                    }}
+                >
+                    <MenuIcon/>
+                </IconButton> 
+
+                <SideDrawer
+                    open={props.drawerOpen}
+                    onClose={(value)=> props.toggleDrawer(value)}
+                />
                 <Logo textColor={props.textColor} />
-                <Ul>
-                    <Li><A href="#" textColor={props.textColor}>Home</A></Li>
-                    <Li><A href="#" textColor={props.textColor}>Highlights</A></Li>
-                    <Li><A href="#" textColor={props.textColor}>Sites</A></Li>
-                    <Li><A href="#" textColor={props.textColor}>About</A></Li>
-                    <Li><A href="#" textColor={props.textColor}>Contact Us</A></Li>
+                <Ul display={!props.showDrawer}>
+                    <Li>
+                        <A href="#" textColor={props.textColor} onClick={(e) => scrollToElement('hero', e)} >Home</A>
+                    </Li>
+                    <Li>
+                        <A href="#" textColor={props.textColor} onClick={(e) => scrollToElement('highlights', e)}>Highlights</A>
+                    </Li>
+                    <Li>
+                        <A href="#" textColor={props.textColor} onClick={(e) => scrollToElement('sites', e)}>Sites</A>
+                    </Li>
+                    <Li>
+                        <A href="#" textColor={props.textColor} onClick={(e) => scrollToElement('about', e)}>About</A>
+                    </Li>
+                    <Li>
+                        <A href="#" textColor={props.textColor} onClick={(e) => scrollToElement('footer', e)}>Contact Us</A>
+                    </Li>
                 </Ul>
             </Toolbar>
           </AppBar>
